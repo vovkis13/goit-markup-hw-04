@@ -137,7 +137,10 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: var(--primary-bg-color);
+  background-image: url(../images/index/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /*   background-color: var(--primary-bg-color); */
 }
 
 .hero-title {
@@ -251,6 +254,22 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+/*=============Clients====================*/
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+.clients-list-item {
+  flex-basis: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+}
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-list .link {
+  display: inline-block;
+}
 
 /*=============Portfolio====================*/
 .filter-list {
@@ -326,7 +345,12 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.footer-container {
+  display: flex;
+}
+.footer-addr {
+  margin-right: 70px;
+}
 .page-footer .logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -342,7 +366,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--white-text-color);
 }
- 
+
 .email,
 .phone {
   display: inline-block;
@@ -354,5 +378,24 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-social {
+  margin-top: 12px;
+}
+.social-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+.social-list {
+  display: flex;
+}
+.social-list-item {
+  margin-right: 10px;
 }
 /*====================================*/
