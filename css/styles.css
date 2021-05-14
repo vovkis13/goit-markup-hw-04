@@ -137,10 +137,16 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-image: url(../images/index/hero-bg.jpg);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/index/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  /*   background-color: var(--primary-bg-color); */
+  background-size: cover;
+  background-color: var(--primary-bg-color);
 }
 
 .hero-title {
@@ -191,6 +197,32 @@ img {
 .advantages-list-item {
   flex-basis: 270px;
 }
+.advantages-list-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: contain;
+  background: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.advantages-list-item:nth-child(1)::before {
+  background-image: url(../images/index/antenna.svg);
+  background-repeat: no-repeat;
+}
+.advantages-list-item:nth-child(2)::before {
+  background-image: url(../images/index/clock.svg);
+}
+.advantages-list-item:nth-child(3)::before {
+  background-image: url(../images/index/diagram.svg);
+}
+.advantages-list-item:nth-child(4)::before {
+  background-image: url(../images/index/astronaut.svg);
+}
+
 .advantages-list-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -234,6 +266,9 @@ img {
   flex-basis: calc((100% - 4 * 30px) / 4);
   margin-top: 30px;
   margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .teammate {
   margin-top: 30px;
@@ -247,22 +282,36 @@ img {
 }
 .teammate-position {
   margin-top: 10px;
-  margin-bottom: 30px;
 
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
 }
+.teammate-social {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 32px 30px 32px;
+  height: 44px;
+  border: 1px solid tomato;
+}
+.social-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid tomato;
+  border-radius: 50%;
+}
 /*=============Clients====================*/
 .clients-list {
   display: flex;
   justify-content: center;
-}
+ }
 .clients-list-item {
   flex-basis: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
@@ -394,8 +443,16 @@ img {
 }
 .social-list {
   display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 44px;
+  border: 1px solid tomato;
 }
 .social-list-item {
-  margin-right: 10px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid tomato;
+  border-radius: 50%;
 }
 /*====================================*/
