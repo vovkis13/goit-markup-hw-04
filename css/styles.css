@@ -197,30 +197,18 @@ img {
 .advantages-list-item {
   flex-basis: 270px;
 }
-.advantages-list-item::before {
+.advantages-button {
   display: block;
-  content: '';
+  padding: 0;
+  border: none;
+  width: 270px;
   height: 120px;
-  background-size: contain;
-  background: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
 
-.advantages-list-item:nth-child(1)::before {
-  background-image: url(../images/index/antenna.svg);
-  background-repeat: no-repeat;
+  background-color: var(--button-primary-bg-color);
 }
-.advantages-list-item:nth-child(2)::before {
-  background-image: url(../images/index/clock.svg);
-}
-.advantages-list-item:nth-child(3)::before {
-  background-image: url(../images/index/diagram.svg);
-}
-.advantages-list-item:nth-child(4)::before {
-  background-image: url(../images/index/astronaut.svg);
+.advantages-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .advantages-list-item:not(:last-child) {
@@ -228,6 +216,7 @@ img {
 }
 
 .advantages-title {
+  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -254,7 +243,7 @@ img {
 
 /*=============Team====================*/
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--button-primary-bg-color);
 }
 .team-list {
   display: flex;
@@ -269,6 +258,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-text-color);
 }
 .teammate {
   margin-top: 30px;
@@ -303,23 +293,36 @@ img {
   border-radius: 50%;
 }
 /*=============Clients====================*/
+
 .clients-list {
   display: flex;
   justify-content: center;
- }
-.clients-list-item {
-  flex-basis: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
+
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-list .link {
-  display: inline-block;
+.clients-link {
+  display: block;
+  border: none;
+  width: 170px;
+  height: 92px;
+  background-color: var(--white-text-color);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
-
+.clients-link:hover {
+  border: 1px solid var(--accent-text-color);
+}
+.clients-icon {
+  margin: 16px 32px;
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+.clients-icon:hover {
+  fill: var(--accent-text-color);
+}
 /*=============Portfolio====================*/
 .filter-list {
   display: flex;
