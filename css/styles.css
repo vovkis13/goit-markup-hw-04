@@ -9,6 +9,7 @@
   --primary-bg-color: #2f303a;
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
+  --default-svg-color: #afb1b8;
 }
 /*=============Common====================*/
 
@@ -281,16 +282,26 @@ img {
 .teammate-social {
   display: flex;
   justify-content: space-between;
-  margin: 16px 32px 30px 32px;
   height: 44px;
-  border: 1px solid tomato;
+  margin: 16px 32px 30px 32px;
 }
 .social-link {
   display: inline-block;
   width: 44px;
   height: 44px;
-  border: 1px solid tomato;
   border-radius: 50%;
+}
+.social-link:hover {
+  background-color: var(--accent-text-color);
+}
+.social-link:hover > .social-icon {
+  fill: var(--white-text-color);
+}
+.social-icon {
+  fill: var(--default-svg-color);
+  width: 20px;
+  height: 20px;
+  margin: 12px;
 }
 /*=============Clients====================*/
 
@@ -308,20 +319,21 @@ img {
   width: 170px;
   height: 92px;
   background-color: var(--white-text-color);
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--default-svg-color);
   border-radius: 4px;
 }
 .clients-link:hover {
   border: 1px solid var(--accent-text-color);
 }
+.clients-link:hover > .clients-icon {
+  fill: var(--accent-text-color);
+}
+
 .clients-icon {
   margin: 16px 32px;
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
-}
-.clients-icon:hover {
-  fill: var(--accent-text-color);
+  fill: var(--default-svg-color);
 }
 /*=============Portfolio====================*/
 .filter-list {
@@ -444,18 +456,29 @@ img {
   text-transform: uppercase;
   color: var(--white-text-color);
 }
-.social-list {
+.footer-social-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  width: 206px;
   height: 44px;
-  border: 1px solid tomato;
+  margin-top: 20px;
 }
-.social-list-item {
+.footer-social-link {
   display: inline-block;
   width: 44px;
   height: 44px;
-  border: 1px solid tomato;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
 }
+.footer-social-link:hover {
+  background-color: var(--accent-text-color);
+}
+.footer-social-icon {
+  fill: var(--white-text-color);
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+}
+
 /*====================================*/
